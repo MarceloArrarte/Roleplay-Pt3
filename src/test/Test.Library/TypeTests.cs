@@ -13,25 +13,25 @@ namespace Test.Library
         [Test]
         public void TestWizardTypes() {
             Wizard gandalf = new Wizard("Gandalf");
-            Assert.IsTrue(gandalf is MagicCharacter && gandalf is Character);
+            Assert.IsTrue(gandalf is MagicHero && gandalf is Hero && gandalf is Character);
         }
 
         [Test]
         public void TestArcherTypes() {
             Archer legolas = new Archer("Legolas");
-            Assert.IsInstanceOf<Character>(legolas);
+            Assert.IsTrue(legolas is Hero && legolas is Character);
         }
 
         [Test]
         public void TestKnightTypes() {
             Knight caballero = new Knight("Caballero genérico");
-            Assert.IsInstanceOf<Character>(caballero);
+            Assert.IsTrue(caballero is Hero && caballero is Character);
         }
 
         [Test]
         public void TestDwarfTypes() {
             Dwarf gimli = new Dwarf("Gimli");
-            Assert.IsInstanceOf<Character>(gimli);
+            Assert.IsTrue(gimli is Hero && gimli is Character);
         }
 
         [Test]
