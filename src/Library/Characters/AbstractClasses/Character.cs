@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RoleplayGame {
     public abstract class Character {
-        private const int K_MaxHealth = 100;
+        public const int K_MaxHealth = 100;
 
         public string Name {get; set;}
 
@@ -64,7 +64,7 @@ namespace RoleplayGame {
 
         public void Cure()
         {
-            this.Health = 100;
+            this.Health = Character.K_MaxHealth;
         }
 
         public void AddItem(IItem item)
